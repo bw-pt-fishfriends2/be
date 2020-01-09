@@ -4,7 +4,7 @@ exports.seed = function(knex) {
   const logArray = []
   for (let i = 1; i < 40; i++) {
     for(let j = 1; j < 5; j++) {
-      logArray.push({baitType: baitType[j], waterBodyId: i, fishId: 1, userId: j, timeSpent: 2, timeOfDay: "3:00 pm"})
+      logArray.push({baitType: baitType[j], waterBodyId: i, fishId: 1, userId: j, timeSpent: 2,timeOfDaydate :"Jan 8,2019,3:00 pm"})
     }
   }
 
