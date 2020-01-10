@@ -10,21 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Build-Week-Fish-Friends/Back-End.git"
+    "url": "https://github.com/bw-pt-fishfriends2/be"
   },
   "keywords": [],
-  "author": "Benjamin Rogers",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Build-Week-Fish-Friends/Back-End/issues"
+    "url": "https://github.com/bw-pt-fishfriends2/be#license"
   },
-  "homepage": "https://github.com/Build-Week-Fish-Friends/Back-End#readme",
+  "homepage": "https://github.com/bw-pt-fishfriends2/be/blob/master/README.md",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "faker": "^4.1.0",
+    
     "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.20.2",
