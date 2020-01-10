@@ -1,7 +1,7 @@
 # 🎣 Fish Friends Back-End 🐟
 Backend Server and Node REST API for Fish Friends
 
-## Maintainer(s)
+
 
 ## Table of Contents
 
