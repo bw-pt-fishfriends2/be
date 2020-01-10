@@ -3,60 +3,46 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
-    connection: {
-      filename: './data/fish-friends.db3'
-    },
-    useNullAsDefault: true,
+    client: 'pg',
+    connection: 'postgres://localhost/fishFriends2',
     migrations: {
-      directory: './data/migrations'
+      directory: './data/migrations',
     },
     seeds: {
-      directory: './data/seeds'
+      directory: './data/seeds',
     },
     pool: {
-      afterCreate: (conn, done) => {
-        conn.run('PRAGMA foreign_keys = ON', done)
-      }
-    }
+      min: 2,
+      max: 10,
+    },
   },
 
   testing: {
     client: 'sqlite3',
     connection: {
-      filename: './data/test-database.db3'
+      filename: './database/test.db3',
     },
     useNullAsDefault: true,
     migrations: {
-      directory: './data/migrations'
+      directory: './database/migrations',
     },
-    seeds: {
-      directory: './data/seeds'
-    },
-
-    pool: {
-      afterCreate: (conn, done) => {
-        conn.run('PRAGMA foreign_keys = ON', done);
-      },
-    }
   },
 
   production: {
-    client: 'sqlite3',
-    connection: {
-      filename: './data/fish-friends.db3'
-    },
-    useNullAsDefault: true,
+    client: 'pg',
+    connection: process.env.DATABASE_URL,
     migrations: {
-      directory: './data/migrations'
+      directory: './data/migrations',
     },
     seeds: {
-      directory: './data/seeds'
+      directory: './data/seeds',
     },
     pool: {
-      afterCreate: (conn, done) => {
-        conn.run('PRAGMA foreign_keys = ON', done)
-      }
-    }
-  }
+      min: 2,
+      max: 10,
+    },
+  },
+
+ 
+
 };
