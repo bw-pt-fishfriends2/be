@@ -1,5 +1,5 @@
 {
-  "name": "Back-End",
+  "name": "back-end",
   "version": "1.0.0",
   "description": "Backend Server and Node REST API for Fish Friends",
   "main": "index.js",
@@ -23,7 +23,6 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    
     "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.20.2",
