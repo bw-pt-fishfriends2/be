@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 
 const Users = require('../users/user-model.js');
 const Token = require('./auth-helpers.js');
-const { validateUser } = require('../users/user-helpers.js');
+// const { validateUser } = require('../users/user-helpers.js');
 
 router.post('/', (req, res) => {
 
