@@ -2,8 +2,6 @@
 Backend Server and Node REST API for Fish Friends
 
 ## Maintainer(s)
-[@thisbenrogers](https://github.com/thisbenrogers)
-
 
 ## Table of Contents
 
