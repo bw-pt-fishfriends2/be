@@ -2,23 +2,29 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 
-const logRoute = require('../routes/logRoute/logRoute.js')
-const authRoute = require('../routes/authRoute/authRoute.js');
-const waterBodyRoute = require('../routes/waterBodyRoute/waterBodyRoute.js')
+const logger = require('../middleware/logger');
+
+const usersRouter = require("../users/user-router");
+const logsRouter = require("../fishLogs/log-router");
+const areasRouter = require("../areas/areas-router");
+const loginRouter = require("../auth/login-router.js");
+const registerRouter = require("../auth/register-router.js");
 
 const server = express();
 
 server.use(helmet());
+server.use(logger);
 server.use(express.json());
 server.use(cors());
 
-server.use('/auth', authRoute)
-server.use('/waterBodies', waterBodyRoute)
-server.use('/logRoute', logRoute);
-// server.use('/docs', express.static("./docs"));
+server.use("/api/login", loginRouter);
+server.use("/api/register", registerRouter);
+server.use("/api/users", usersRouter);
+server.use("/api/areas", areasRouter);
+server.use("/api/logs", logsRouter);
 
-server.use('/', (req, res) => {
-    res.status(200).json({message: 'server base route is working!'});
-});
+server.get('/', (req, res) => {
+  res.send('<h1>🎣</h1>');
+})
 
 module.exports = server;
